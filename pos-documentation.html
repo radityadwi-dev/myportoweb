@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Dokumentasi project Aplikasi POS / Point Of Sale berbasis tablet oleh Raditya Dwi Pahlawadi." />
+  <meta name="author" content="Raditya Dwi Pahlawadi" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <title>Dokumentasi Aplikasi POS | Raditya Dwi Pahlawadi</title>
+</head>
+
+<body>
+  <header class="site-header" data-header>
+    <nav class="navbar container" aria-label="Navigasi dokumentasi">
+      <a class="brand" href="/index.html#home" aria-label="Raditya Dwi Pahlawadi">
+        <span class="brand-mark">R</span>
+        <span>Raditya</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" data-nav-menu>
+        <a class="nav-link" href="/index.html#projects">Projects</a>
+        <a class="nav-link" href="/index.html#experience">Experience</a>
+        <a class="nav-link" href="/index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="documentation-page">
+    <section class="section doc-hero">
+      <div class="container doc-hero-content reveal">
+        <p class="eyebrow">Dokumentasi Project</p>
+        <h1>Aplikasi POS / Point Of Sale</h1>
+        <p>
+          Aplikasi POS berbasis tablet untuk membantu proses transaksi penjualan, pengelolaan shopping cart,
+          pencarian produk, barcode scanning, dan pembayaran melalui QRIS maupun transfer bank.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/index.html#projects">Kembali ke Projects</a>
+          <a class="btn btn-secondary" href="/index.html#contact">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container doc-grid">
+        <article class="doc-panel reveal">
+          <p class="card-kicker">Role</p>
+          <h2>Front-End Developer</h2>
+          <p>
+            Bertanggung jawab pada implementasi antarmuka transaksi dan shopping cart menggunakan Kotlin,
+            termasuk tampilan tablet, alur pemilihan produk, dan pengalaman kasir saat melakukan checkout.
+          </p>
+        </article>
+
+        <article class="doc-panel reveal">
+          <p class="card-kicker">Periode</p>
+          <h2>Agustus 2025 - Desember 2025</h2>
+          <p>
+            Project ini dikerjakan sebagai bagian dari pengalaman PKL / internship dengan fokus pada aplikasi
+            operasional yang digunakan untuk transaksi penjualan harian.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container doc-detail">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Fitur Utama</p>
+          <h2>Fokus pengembangan aplikasi POS</h2>
+        </div>
+
+        <div class="doc-feature-list">
+          <article class="doc-feature reveal">
+            <span>01</span>
+            <div>
+              <h3>Transaksi & Shopping Cart</h3>
+              <p>Membangun UI transaksi, daftar item, jumlah produk, subtotal, dan alur checkout pada tablet.</p>
+            </div>
+          </article>
+
+          <article class="doc-feature reveal">
+            <span>02</span>
+            <div>
+              <h3>Barcode Scanner</h3>
+              <p>Mengimplementasikan pencarian produk melalui barcode scanner agar proses input barang lebih cepat.</p>
+            </div>
+          </article>
+
+          <article class="doc-feature reveal">
+            <span>03</span>
+            <div>
+              <h3>Pencarian Produk</h3>
+              <p>Menyediakan fitur pencarian produk untuk membantu kasir menemukan item tanpa perlu scan barcode.</p>
+            </div>
+          </article>
+
+          <article class="doc-feature reveal">
+            <span>04</span>
+            <div>
+              <h3>Pembayaran</h3>
+              <p>Mendukung metode pembayaran QRIS dan transfer bank dalam alur transaksi aplikasi POS.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">Alur Transaksi</p>
+          <h2>Dokumentasi dari pemilihan produk sampai pembayaran</h2>
+          <p>
+            Rangkaian layar berikut menunjukkan flow utama aplikasi POS, mulai dari memuat katalog produk,
+            memilih varian, memasukkan produk ke cart, hingga menyelesaikan pembayaran.
+          </p>
+        </div>
+
+        <div class="doc-flow">
+          <article class="doc-flow-step reveal">
+            <div class="doc-flow-copy">
+              <span>01</span>
+              <h3>Memuat katalog produk</h3>
+              <p>
+                Halaman transaksi menampilkan area pencarian produk, koneksi barcode scanner, shopping cart,
+                dan ringkasan pembayaran. Data produk dimuat sebelum kasir mulai memilih barang.
+              </p>
+            </div>
+            <figure>
+              <img src="/pos-flow-01-loading.jpeg" alt="Tampilan awal POS saat memuat data produk" />
+            </figure>
+          </article>
+
+          <article class="doc-flow-step reveal">
+            <div class="doc-flow-copy">
+              <span>02</span>
+              <h3>Produk siap dipilih</h3>
+              <p>
+                Setelah katalog tampil, kasir bisa memilih produk dari daftar, mencari berdasarkan kode,
+                mencari berdasarkan nama, atau menggunakan barcode scanner.
+              </p>
+            </div>
+            <figure>
+              <img src="/pos-flow-02-products.jpeg" alt="Daftar produk POS setelah data berhasil dimuat" />
+            </figure>
+          </article>
+
+          <article class="doc-flow-step reveal">
+            <div class="doc-flow-copy">
+              <span>03</span>
+              <h3>Pilih varian produk</h3>
+              <p>
+                Untuk produk yang memiliki pilihan ukuran atau pattern, aplikasi membuka dialog varian agar item
+                yang masuk ke keranjang sesuai dengan pilihan pelanggan.
+              </p>
+            </div>
+            <figure>
+              <img src="/pos-flow-03-variant.jpeg" alt="Dialog pemilihan varian produk pada aplikasi POS" />
+            </figure>
+          </article>
+
+          <article class="doc-flow-step reveal">
+            <div class="doc-flow-copy">
+              <span>04</span>
+              <h3>Produk masuk shopping cart</h3>
+              <p>
+                Item yang sudah dipilih masuk ke shopping cart, lengkap dengan ukuran, harga, discount,
+                kontrol jumlah, subtotal, dan total transaksi.
+              </p>
+            </div>
+            <figure>
+              <img src="/pos-flow-04-cart.jpeg" alt="Shopping cart POS berisi produk yang dipilih" />
+            </figure>
+          </article>
+
+          <article class="doc-flow-step reveal">
+            <div class="doc-flow-copy">
+              <span>05</span>
+              <h3>Pembayaran cash</h3>
+              <p>
+                Ketika metode cash dipilih, aplikasi menampilkan dialog input jumlah uang yang dibayarkan
+                untuk melanjutkan proses transaksi.
+              </p>
+            </div>
+            <figure>
+              <img src="/pos-flow-05-cash.jpeg" alt="Dialog pembayaran cash pada aplikasi POS" />
+            </figure>
+          </article>
+
+          <article class="doc-flow-step reveal">
+            <div class="doc-flow-copy">
+              <span>06</span>
+              <h3>Pembayaran transfer bank</h3>
+              <p>
+                Untuk transfer bank, aplikasi menampilkan dialog nomor rekening atau data pembayaran yang
+                dibutuhkan sebelum transaksi dikonfirmasi.
+              </p>
+            </div>
+            <figure>
+              <img src="/pos-flow-06-bank.jpeg" alt="Dialog pembayaran transfer bank pada aplikasi POS" />
+            </figure>
+          </article>
+
+          <article class="doc-flow-step reveal">
+            <div class="doc-flow-copy">
+              <span>07</span>
+              <h3>Pembayaran QRIS</h3>
+              <p>
+                Pada metode QRIS, aplikasi menampilkan QR code pembayaran agar pelanggan bisa melakukan scan
+                dan kasir dapat mengirim konfirmasi pembayaran.
+              </p>
+            </div>
+            <figure>
+              <img src="/pos-flow-07-qris.jpeg" alt="Dialog pembayaran QRIS pada aplikasi POS" />
+            </figure>
+          </article>
+
+          <article class="doc-flow-step reveal">
+            <div class="doc-flow-copy">
+              <span>08</span>
+              <h3>Keranjang berisi banyak item</h3>
+              <p>
+                Aplikasi mendukung lebih dari satu item dalam keranjang, termasuk perubahan jumlah, penghapusan
+                item, dan pembaruan total transaksi secara langsung.
+              </p>
+            </div>
+            <figure>
+              <img src="/pos-flow-08-multiple-cart.jpeg" alt="Shopping cart POS dengan beberapa item produk" />
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container doc-stack reveal">
+        <div>
+          <p class="eyebrow">Tech Stack</p>
+          <h2>Teknologi yang digunakan</h2>
+        </div>
+        <div class="tech-stack">
+          <span>Kotlin</span>
+          <span>Tablet UI</span>
+          <span>Barcode</span>
+          <span>QRIS</span>
+          <span>Transfer Bank</span>
+          <span>POS Workflow</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

@@ -445,13 +445,40 @@ h3 {
 
 .experience-card {
   display: grid;
-  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
-  gap: 28px;
-  padding: 30px;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 34px;
+  padding: 32px;
 }
 
 .experience-card p {
   margin: 0;
+}
+
+.experience-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.experience-heading img {
+  width: 82px;
+  height: 82px;
+  flex: 0 0 auto;
+  object-fit: contain;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 10px;
+}
+
+.experience-heading h3 {
+  margin-top: 6px;
+}
+
+.experience-copy {
+  max-width: 680px;
+  line-height: 1.58;
 }
 
 .skills-grid,
@@ -540,6 +567,160 @@ h3 {
   gap: 10px;
   margin-top: auto;
   padding-top: 22px;
+}
+
+.documentation-page {
+  padding-top: var(--header-height);
+}
+
+.doc-hero {
+  display: flex;
+  align-items: center;
+  min-height: calc(78vh - var(--header-height));
+  padding: 72px 0;
+}
+
+.doc-hero-content {
+  max-width: 860px;
+}
+
+.doc-hero h1 {
+  max-width: 780px;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+}
+
+.doc-hero p {
+  max-width: 760px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.doc-panel,
+.doc-feature {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.doc-panel {
+  padding: 28px;
+}
+
+.doc-panel h2 {
+  margin-top: 8px;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+.doc-panel p:not(.card-kicker),
+.doc-feature p {
+  color: var(--muted);
+}
+
+.doc-detail {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.25fr);
+  gap: 34px;
+  align-items: start;
+}
+
+.doc-feature-list {
+  display: grid;
+  gap: 14px;
+}
+
+.doc-feature {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 18px;
+  padding: 22px;
+}
+
+.doc-feature span {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+  font-weight: 800;
+}
+
+.doc-feature h3 {
+  margin-bottom: 6px;
+}
+
+.doc-feature p {
+  margin: 0;
+}
+
+.doc-stack {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.doc-flow {
+  display: grid;
+  gap: 26px;
+  margin-top: 42px;
+}
+
+.doc-flow-step {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.48fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.doc-flow-copy span {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+  font-weight: 800;
+}
+
+.doc-flow-copy h3 {
+  margin-top: 18px;
+}
+
+.doc-flow-copy p {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.doc-flow-step figure {
+  margin: 0;
+  overflow: hidden;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.doc-flow-step img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 .contact-section {
@@ -646,8 +827,16 @@ h3 {
   .hero-grid,
   .two-column,
   .contact-grid,
-  .experience-card {
+  .experience-card,
+  .doc-grid,
+  .doc-detail,
+  .doc-flow-step {
     grid-template-columns: 1fr;
+  }
+
+  .doc-stack {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .projects-grid,
