@@ -5,30 +5,10 @@ const header = document.querySelector<HTMLElement>('[data-header]');
 const navToggle = document.querySelector<HTMLButtonElement>('[data-nav-toggle]');
 const navMenu = document.querySelector<HTMLElement>('[data-nav-menu]');
 const navLinks = document.querySelectorAll<HTMLAnchorElement>('.nav-link');
-const themeToggle = document.querySelector<HTMLButtonElement>('[data-theme-toggle]');
-const themeIcon = document.querySelector<HTMLElement>('[data-theme-icon]');
 const contactForm = document.querySelector<HTMLFormElement>('[data-contact-form]');
 const formNote = document.querySelector<HTMLElement>('[data-form-note]');
 
-const savedTheme = localStorage.getItem('portfolio-theme');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-  body.classList.add('dark-theme');
-}
-
-const syncThemeLabel = () => {
-  if (!themeIcon) return;
-  themeIcon.textContent = body.classList.contains('dark-theme') ? 'Light' : 'Dark';
-};
-
-syncThemeLabel();
-
-themeToggle?.addEventListener('click', () => {
-  body.classList.toggle('dark-theme');
-  localStorage.setItem('portfolio-theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
-  syncThemeLabel();
-});
+body.classList.remove('dark-theme');
 
 navToggle?.addEventListener('click', () => {
   const isOpen = navMenu?.classList.toggle('open') ?? false;
