@@ -1,0 +1,97 @@
+import './styles.css';
+
+const body = document.body;
+const header = document.querySelector<HTMLElement>('[data-header]');
+const navToggle = document.querySelector<HTMLButtonElement>('[data-nav-toggle]');
+const navMenu = document.querySelector<HTMLElement>('[data-nav-menu]');
+const navLinks = document.querySelectorAll<HTMLAnchorElement>('.nav-link');
+const themeToggle = document.querySelector<HTMLButtonElement>('[data-theme-toggle]');
+const themeIcon = document.querySelector<HTMLElement>('[data-theme-icon]');
+const contactForm = document.querySelector<HTMLFormElement>('[data-contact-form]');
+const formNote = document.querySelector<HTMLElement>('[data-form-note]');
+
+const savedTheme = localStorage.getItem('portfolio-theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+  body.classList.add('dark-theme');
+}
+
+const syncThemeLabel = () => {
+  if (!themeIcon) return;
+  themeIcon.textContent = body.classList.contains('dark-theme') ? 'Light' : 'Dark';
+};
+
+syncThemeLabel();
+
+themeToggle?.addEventListener('click', () => {
+  body.classList.toggle('dark-theme');
+  localStorage.setItem('portfolio-theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
+  syncThemeLabel();
+});
+
+navToggle?.addEventListener('click', () => {
+  const isOpen = navMenu?.classList.toggle('open') ?? false;
+  navToggle.classList.toggle('open', isOpen);
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    navMenu?.classList.remove('open');
+    navToggle?.classList.remove('open');
+    navToggle?.setAttribute('aria-expanded', 'false');
+  });
+});
+
+const setHeaderState = () => {
+  header?.classList.toggle('scrolled', window.scrollY > 16);
+};
+
+setHeaderState();
+window.addEventListener('scroll', setHeaderState, { passive: true });
+
+const sections = document.querySelectorAll<HTMLElement>('main section[id]');
+const activeObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      navLinks.forEach((link) => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+      });
+    });
+  },
+  {
+    rootMargin: '-45% 0px -50% 0px',
+    threshold: 0,
+  },
+);
+
+sections.forEach((section) => activeObserver.observe(section));
+
+const revealItems = document.querySelectorAll<HTMLElement>('.reveal');
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.14,
+  },
+);
+
+revealItems.forEach((item) => revealObserver.observe(item));
+
+contactForm?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  contactForm.reset();
+
+  if (formNote) {
+    formNote.textContent = 'Terima kasih. Pesan kamu sudah tercatat di form ini.';
+  }
+});

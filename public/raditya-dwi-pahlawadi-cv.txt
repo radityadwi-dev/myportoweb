@@ -1,0 +1,54 @@
+Raditya Dwi Pahlawadi
+Junior Front-End Developer
+
+Kontak
+WhatsApp: 0813-8373-4851
+Email: radityadwipahlawadi@gmail.com
+Lokasi: Kelapa Dua Wetan, Jakarta Timur
+Instagram: @radityapahlawadi
+
+Tentang Saya
+Front-End Developer dengan pengalaman kurang lebih satu tahun dan ketertarikan kuat dalam bidang Front-End Developer dan teknologi informasi. Terbiasa bekerja secara kolaboratif dan terus belajar teknologi baru untuk meningkatkan kualitas pengembangan aplikasi.
+
+Pendidikan
+SMK Negeri 24 Jakarta
+Jurusan: Rekayasa Perangkat Lunak
+Periode: Juli 2023 - Mei 2026
+
+Experience
+PKL / Internship di PT Steradian Data Optima
+Membantu pengembangan fitur, debugging, memahami workflow project, dan berkolaborasi dengan tim selama proses pengembangan aplikasi.
+
+Pengalaman Proyek
+1. Javes Store - Fullstack Developer
+Periode: April 2026 - Sekarang
+Mengembangkan website top up game dan digital product berbasis web mulai dari frontend dan backend.
+- Mengembangkan frontend menggunakan React & Vite
+- Membuat dan mengelola backend API
+- Integrasi QRIS Payment Gateway dan provider top up
+- Deployment server VPS, Nginx, domain, dan SSL
+- Maintenance dan debugging website
+
+2. Website CRM - Front-End Developer
+Periode: Februari 2026 - Sekarang
+Project aplikasi Customer Relationship Management berbasis website untuk pengelolaan data account dan aktivitas customer.
+- Mengembangkan dan maintenance UI halaman Account dan Account Detail
+- Mengintegrasikan frontend dengan REST API
+- Debugging dan optimasi performa frontend
+- Kolaborasi dengan tim backend
+
+3. Aplikasi POS / Point Of Sale - Front-End Developer
+Periode: Agustus 2025 - Desember 2025
+Aplikasi POS berbasis tablet untuk transaksi penjualan dan pembayaran.
+- Mengembangkan UI transaksi dan shopping cart menggunakan Kotlin
+- Implementasi fitur barcode scanner dan pencarian produk
+- Integrasi metode pembayaran QRIS dan transfer bank
+
+Keterampilan Teknis
+Kotlin, React, PHP, Laravel, Vue.js, Vite
+
+Tools
+Visual Studio Code, Antigravity, Android Studio, GitHub, XAMPP, Blender
+
+Soft Skills
+Leadership, Komunikatif, Kolaboratif, Rasa ingin tahu tinggi terhadap teknologi baru, Bertanggung jawab, Mampu bekerja sama dalam tim maupun mandiri
