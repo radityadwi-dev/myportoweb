@@ -7,6 +7,7 @@ const navMenu = document.querySelector<HTMLElement>('[data-nav-menu]');
 const navLinks = document.querySelectorAll<HTMLAnchorElement>('.nav-link');
 const contactForm = document.querySelector<HTMLFormElement>('[data-contact-form]');
 const formNote = document.querySelector<HTMLElement>('[data-form-note]');
+const footerSlot = document.querySelector<HTMLElement>('[data-footer]');
 
 body.classList.remove('dark-theme');
 
@@ -66,6 +67,28 @@ const revealObserver = new IntersectionObserver(
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
+
+const loadFooter = async () => {
+  if (!footerSlot) return;
+
+  try {
+    const response = await fetch('/footer.html');
+    if (!response.ok) return;
+
+    footerSlot.innerHTML = await response.text();
+
+    const backToTopLink = footerSlot.querySelector<HTMLAnchorElement>('[data-back-to-top]');
+    const pageTopId = body.dataset.pageTop;
+
+    if (backToTopLink && pageTopId) {
+      backToTopLink.href = `#${pageTopId}`;
+    }
+  } catch {
+    footerSlot.remove();
+  }
+};
+
+void loadFooter();
 
 contactForm?.addEventListener('submit', (event) => {
   event.preventDefault();

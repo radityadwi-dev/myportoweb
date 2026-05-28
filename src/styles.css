@@ -59,7 +59,11 @@ textarea {
 }
 
 .section {
-  padding: 104px 0;
+  padding: 88px 0;
+}
+
+main section[id] {
+  scroll-margin-top: calc(var(--header-height) + 18px);
 }
 
 .section-soft {
@@ -193,10 +197,10 @@ textarea {
 }
 
 .hero {
-  min-height: 100vh;
+  min-height: 88vh;
   display: flex;
   align-items: center;
-  padding-top: calc(var(--header-height) + 64px);
+  padding-top: calc(var(--header-height) + 56px);
 }
 
 .hero-grid {
@@ -381,6 +385,28 @@ h3 {
   align-items: start;
 }
 
+.about-section {
+  padding: 72px 0;
+}
+
+.about-card {
+  align-items: center;
+  gap: 48px;
+  padding: 34px;
+}
+
+.about-card .section-heading {
+  max-width: 500px;
+}
+
+.about-card .section-copy {
+  max-width: 650px;
+}
+
+.about-card .section-copy p:last-child {
+  margin-bottom: 0;
+}
+
 .section-heading {
   max-width: 720px;
 }
@@ -400,6 +426,7 @@ h3 {
 }
 
 .timeline-card,
+.about-card,
 .experience-card,
 .skill-panel,
 .project-card,
@@ -667,6 +694,28 @@ h3 {
   align-items: center;
   justify-content: space-between;
   gap: 28px;
+  padding: 30px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.doc-stack h2 {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+}
+
+.doc-stack .tech-stack {
+  max-width: 520px;
+  justify-content: flex-end;
+}
+
+.doc-flow-section {
+  padding-bottom: 36px;
+}
+
+.doc-stack-section {
+  padding-top: 0;
 }
 
 .doc-flow {
@@ -839,6 +888,11 @@ h3 {
     flex-direction: column;
   }
 
+  .about-card {
+    gap: 26px;
+    align-items: flex-start;
+  }
+
   .projects-grid,
   .skills-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -905,7 +959,11 @@ h3 {
   }
 
   .section {
-    padding: 78px 0;
+    padding: 68px 0;
+  }
+
+  .about-section {
+    padding: 56px 0;
   }
 }
 
@@ -935,6 +993,7 @@ h3 {
 
   .profile-card,
   .timeline-card,
+  .about-card,
   .experience-card,
   .skill-panel,
   .project-card,
